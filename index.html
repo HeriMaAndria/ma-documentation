@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources Web - Documentation Dev</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="doc-app">
+
+    <!-- HEADER -->
+    <header class="doc-header">
+        <div class="doc-header__container">
+            <h1 class="doc-header__title">📚 Ma Documentation Web</h1>
+            <p class="doc-header__subtitle">Base de connaissances HTML, CSS & JavaScript</p>
+
+            <div class="search">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search__input"
+                    placeholder="Rechercher une ressource..."
+                    aria-label="Rechercher une ressource"
+                >
+                <button 
+                    id="clearSearch" 
+                    class="search__clear"
+                    aria-label="Effacer la recherche"
+                >✕</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <div class="doc-layout">
+
+        <!-- SIDEBAR NAVIGATION -->
+        <aside class="sidebar" id="sommaire">
+            <button 
+                id="toggleSommaire" 
+                class="sidebar__toggle"
+                aria-label="Basculer la navigation"
+                aria-expanded="false"
+            >☰</button>
+
+            <nav class="sidebar__nav" aria-label="Navigation principale">
+                <h2 class="sidebar__title">Navigation</h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="#section-html" class="sidebar__link">HTML</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#section-css" class="sidebar__link">CSS</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#section-js" class="sidebar__link">JavaScript</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#section-combine" class="sidebar__link">Multi-Languages</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- CONTENU PRINCIPAL -->
+        <main class="doc-main">
+
+            <!-- FILTRES -->
+            <div class="filters">
+                <button 
+                    class="filters__btn filters__btn--active" 
+                    data-filtre="tous"
+                    aria-pressed="true"
+                >
+                    Tout afficher
+                </button>
+                <button 
+                    class="filters__btn" 
+                    data-filtre="html"
+                    aria-pressed="false"
+                >
+                    HTML
+                </button>
+                <button 
+                    class="filters__btn" 
+                    data-filtre="css"
+                    aria-pressed="false"
+                >
+                    CSS
+                </button>
+                <button 
+                    class="filters__btn" 
+                    data-filtre="js"
+                    aria-pressed="false"
+                >
+                    JavaScript
+                </button>
+                <button 
+                    class="filters__btn" 
+                    data-filtre="combine"
+                    aria-pressed="false"
+                >
+                    Multi-Languages
+                </button>
+            </div>
+
+            <!-- SECTION HTML -->
+            <section id="section-html" class="resources-section">
+                <h2 class="resources-section__title">🟠 HTML</h2>
+                <div class="resources-grid">
+                    <!-- Les cartes seront générées par JS -->
+                </div>
+            </section>
+
+            <!-- SECTION CSS -->
+            <section id="section-css" class="resources-section">
+                <h2 class="resources-section__title">🔵 CSS</h2>
+                <div class="resources-grid">
+                    <!-- Les cartes seront générées par JS -->
+                </div>
+            </section>
+
+            <!-- SECTION JAVASCRIPT -->
+            <section id="section-js" class="resources-section">
+                <h2 class="resources-section__title">🟡 JavaScript</h2>
+                <div class="resources-grid">
+                    <!-- Les cartes seront générées par JS -->
+                </div>
+            </section>
+
+            <!-- SECTION COMBINÉ -->
+            <section id="section-combine" class="resources-section">
+                <h2 class="resources-section__title">🌈 Multi-Languages</h2>
+                <div class="resources-grid">
+                    <!-- Les cartes seront générées par JS -->
+                </div>
+            </section>
+
+            <!-- MESSAGE AUCUN RÉSULTAT -->
+            <div id="noResults" class="no-results" style="display: none;" role="status" aria-live="polite">
+                <div class="no-results__content">
+                    <span class="no-results__icon">🔍</span>
+                    <p class="no-results__text">Aucune ressource trouvée pour cette recherche.</p>
+                    <button class="no-results__btn" onclick="document.getElementById('clearSearch').click()">
+                        Réinitialiser la recherche
+                    </button>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- 1. Fichiers de données -->
+    <script src="js/html-base-resources.js"></script>
+    <script src="js/css-base-resources.js"></script>
+    <script src="js/js-base-resources.js"></script>
+    <script src="js/combine-base-resources.js"></script>
+
+    <script src="js/html-inter-resources.js"></script>
+    <script src="js/css-inter-resources.js"></script>
+    <script src="js/js-inter-resources.js"></script>
+    <script src="js/combine-inter-resources.js"></script>
+
+    <script src="js/html-avance-resources.js"></script>
+    <script src="js/css-avance-resources.js"></script>
+    <script src="js/js-avance-resources.js"></script>
+    <script src="js/combine-avance-resources.js"></script>
+
+    <!-- 2. Script principal -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
