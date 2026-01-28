@@ -265,7 +265,7 @@ Modifiez les couleurs et espacements dans `style.css` :
 
 ## 📊 Statistiques
 
-- **800+** ressources documentées
+- **140** ressources documentées
 - **3** niveaux de difficulté (Base, Intermédiaire, Avancé)
 - **4** catégories (HTML, CSS, JavaScript, Multi-Languages)
 - **100%** responsive et accessible
@@ -351,7 +351,7 @@ Ce projet est sous licence **MIT**. Voir le fichier [LICENSE.md](LICENSE.md) pou
 ### Version actuelle (v1.0)
 ✅ Recherche et filtres  
 ✅ Responsive complet  
-✅ 800+ ressources  
+✅ 140 ressources  
 ✅ Navigation fluide  
 
 ### Prochaines versions
